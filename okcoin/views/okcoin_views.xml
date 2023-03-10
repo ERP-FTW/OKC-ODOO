@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="okcoin_form_view_id">
+      <field name="name">Okcoin API connection form</field>
+      <field name="model">okcoin.model</field>
+      <field name="arch" type="xml">
+        <form string="Form View Name">
+          <header>
+            <button name="Testing" string="Testing" type="object" class="oe_highlight"/>
+            <button name="Balance" string="Balance" type="object" class="oe_highlight"/>
+            <button name="Lightning_invoice" string="Lightning invoice" type="object" class="oe_highlight"/>
+
+          </header>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="api_key"/>
+              <field name="secret"/>
+              <field name="password"/>
+              <field name="maker_taker"/>
+              <field name="convert_percent"/>
+              <field name="over_percent"/>
+              <field name="secret"/>
+              <field name="test"/>
+              <field name="balance"/>
+              <field name="linvoice_amount"/>
+              <field name="lightning_invoice"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="okcoin_tree_view_action">
+      <field name="name">Okcoin Tree View</field>
+      <field name="res_model">okcoin.model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="okcoin_menu_item" name="Okcoin Settings" parent="point_of_sale.menu_point_config_product" sequence="2" action="okcoin_tree_view_action"/>
+
+  </data>
+</odoo>
