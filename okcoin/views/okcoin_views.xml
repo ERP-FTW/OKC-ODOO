@@ -11,6 +11,12 @@
             <button name="Testing" string="Testing" type="object" class="oe_highlight"/>
             <button name="Balance" string="Balance" type="object" class="oe_highlight"/>
             <button name="Lightning_invoice" string="Lightning invoice" type="object" class="oe_highlight"/>
+            <button name="Lightning_invoice_qr" string="Make QR" type="object" class="oe_highlight"/>
+            <button name="Lightning_invoice_qr_display" string="Make QR display" type="object" class="oe_highlight"/>
+            <button name="Lightning_deposit_status" string="Lightning invoice status" type="object" class="oe_highlight"/>
+            <button name="Account_transfer" string="Account transfer" type="object" class="oe_highlight"/>
+
+
 
           </header>
           <sheet>
@@ -25,8 +31,12 @@
               <field name="secret"/>
               <field name="test"/>
               <field name="balance"/>
-              <field name="linvoice_amount"/>
+              <field name="lightning_invoice_amount"/>
               <field name="lightning_invoice"/>
+              <field name="qr_generated"/>
+              <field name="deposit_qr" widget="image" options="{'size': [300, 300]}"/>
+              <field name="lightning_deposit_status"/>
+              <field name="fund_transfer_id"/>
             </group>
           </sheet>
         </form>
